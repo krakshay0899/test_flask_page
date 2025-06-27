@@ -1,0 +1,19 @@
+<!-- filepath: d:\To-Do-Things\DigitalHolography_using _angular_spectrum\flask\templates\index.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Invert Image with Flask</title></head>
+<body>
+    <h2>Upload an Image to Invert</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <input type="submit" value="Upload and Invert">
+    </form>
+
+    {% if original and inverted %}
+        <h3>Original Image:</h3>
+        <img src="{{ original }}" width="300"><br>
+        <h3>Inverted Image:</h3>
+        <img src="{{ inverted }}" width="300">
+    {% endif %}
+</body>
+</html>
